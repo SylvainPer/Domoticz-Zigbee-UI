@@ -8,14 +8,22 @@
           <div class="card-text">
             <div class="row">
               <div class="col-sm">
-                <ng-select [items]="devices$ | async" [multiple]="false" [closeOnSelect]="true" [searchable]="true"
-                  bindLabel="ZDeviceName" bindValue="_NwkId"
+                <<<<<<< HEAD <ng-select [items]="devices$ | async" [multiple]="false" [closeOnSelect]="true"
+                  [searchable]="true" bindLabel="ZDeviceName" bindValue="_NwkId"
                   placeholder="{{ 'tools.rawcommand-zigpy.placeholder' | translate }}" formControlName="TargetAddr">
                   <ng-template ng-option-tmp let-item="item" let-index="index" let-search="searchTerm">
                     <span [ngOptionHighlight]="search">
                       <b>Name</b> : {{ item.ZDeviceName }} - <b>NwkId</b> : {{ item._NwkId }}</span>
-                  </ng-template>
-                </ng-select>
+                    =======
+                    <ng-select [items]="devices$ | async" [multiple]="false" [closeOnSelect]="true" [searchable]="true"
+                      bindLabel="ZDeviceName" bindValue="_NwkId"
+                      placeholder="{{ 'tools.rawcommand-zigpy.placeholder' | translate }}" formControlName="TargetAddr">
+                      <ng-template ng-option-tmp let-item="item" let-index="index" let-search="searchTerm">
+                        <span [ngOptionHighlight]="search">
+                          <b>Name</b> : {{ item.ZDeviceName }} - <b>NwkId</b> : {{ item._NwkId }}</span>
+                        >>>>>>> 313af5acd70b45b3eca865e32fc5e5eb015136a5
+                      </ng-template>
+                    </ng-select>
               </div>
             </div>
             <div class="row mt-2">
@@ -76,15 +84,6 @@
                 <div>
                   <input type="text" formControlName="TargetEp"
                     placeholder="{{ 'tools.rawcommand-zigpy.TargetEp' | translate }}" class="w-100 form-control" />
-                </div>
-              </div>
-              <div class="col-sm">
-                <label translate="tools.rawcommand-zigpy.Sqn"></label>
-              </div>
-              <div class="col-sm-2">
-                <div>
-                  <input type="text" formControlName="Sqn" placeholder="{{ 'tools.rawcommand-zigpy.Sqn' | translate }}"
-                    class="w-100 form-control" />
                 </div>
               </div>
             </div>
